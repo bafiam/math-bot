@@ -1,3 +1,4 @@
+require_relative './helper'
 module Mathbot
   module Commands
     class SumString < SlackRubyBot::Commands::Base
@@ -5,7 +6,7 @@ module Mathbot
         expression = match[:expression]
         str_split = expression.split(' ')
         if str_split.include? '+'
-          results = ([str_split[0].to_i, str_split[2].to_i].sum).to_s
+          results = [str_split[0].to_i, str_split[2].to_i].sum.to_s if str_split[0].numeric? && str_split[2].numeric?
           if results && !results.empty?
 
             client.say(channel: data.channel, text: "#{str_split[0]} + #{str_split[2]} = #{results}")
