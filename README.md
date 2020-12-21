@@ -1,4 +1,4 @@
-# Slack Bot - Capstone Projects
+# Math Bot - Peoplebox Interview Exercise
 
 The Math bot that adds two numbers.
 
