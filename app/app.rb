@@ -4,8 +4,8 @@ module Mathbot
       title 'Math Bot'
       desc 'A bot to sum two numbers'
 
-      command :calc do
-        title 'calc'
+      command "=" do
+        title '='
         desc 'return the sum results of two numbers'
       end
     end
